@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="/static/template.css">
+    <title>Flask Tutorial</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+	
+ 
+
+	
+
+
+ 
+
+{% if API_flage %}
+
+<h2> Here is an example from New York Times</h2>
+
+{% else %}
+
+<h2>News</h2>
+
+{% endif %}
+
+{% for ele in content %} 
+    <span style="background-color: {{ele[1]}}">{{ele[0]}}</span>
+{%endfor%}
+
+<h2>Summary</h2>
+<form action="/sum" method="POST">
+
+    <p><textarea name="message" rows=10 cols=120>{{summary}}</textarea></p>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Level select</label>
+    <select class="form-control", name="comp_select">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+		<p><input type="submit", rows=10 cols=60, value="Submit", color = "black"/></p>
+</form>
+
+
+
+    {% endblock %}
+  </body>
+</html>

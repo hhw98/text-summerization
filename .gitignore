@@ -1,0 +1,19 @@
+###secrets ###
+deploy/secret.py
+
+
+.ipynb_checkpoints/
+
+deploy/env/
+
+flask_example/env/
+
+flask_example/__MACOSX
+
+deploy/__pycache__
+
+flask_example/
+
+LDA/
+
+__pycache__/
